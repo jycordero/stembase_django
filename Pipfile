@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+graphene-django = "*"
+django = "*"
+psycopg2 = "*"
+jupyter = "*"
+ipython = "*"
+django-extensions = "*"
+jupyter-contrib-nbextensions = "*"
+jupyter-client = "*"
+jupyter-core = "*"
+asgiref = "*"
+pandas = "*"
+gspread = "*"
+gspread-dataframe = "*"
+sqlalchemy = "*"
+dj-database-url = "*"
+gunicorn = "*"
+whitenoise = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

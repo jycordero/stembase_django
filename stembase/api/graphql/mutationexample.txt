@@ -1,0 +1,127 @@
+mutation createCountry {
+  createCountry(input: {
+    name: "El Salvador"
+  }) {
+    ok
+    country {
+      id
+      name
+    }
+  }
+}
+
+
+mutation createCity {
+  createCity(input: {
+    name: "San Juan"
+  }) {
+    ok
+    city {
+      id
+      name
+    }
+  }
+}
+
+mutation createDiscipline {
+  createDiscipline(input: {
+    discipline: "Religion"
+  }) {
+    ok
+    city {
+      id
+      discipline
+    }
+  }
+}
+
+mutation createContact {
+  createContact(input: {
+    name: "Misisfu"
+    email: "noname@name.com"
+  }) {
+    ok
+    contact {
+      id
+      name
+      email
+    }
+  }
+}
+
+
+
+
+### NOT COMPLETE
+mutation createResource {
+  createResource(input: {
+    name:"Resource"
+    link:"https://stackabuse.com/building-a-graphql-api-with-django/"
+    deadlineTba:1
+    deadline:"2/1/2020"
+    eligibility:"US citizen"
+    paid:1
+    description:"lakjsdhflkjasfhaskjdl askljdfhlksajd ;ajskdfhlksajdfh"
+    duration:"1 year"
+    host:"University of Puerto Rico"
+    country:"United States" 
+    province:"PR"  
+    city:"San Juan"
+    kinds:{
+    	kind:"Research Opportunity" 
+    }
+       kind:"Summer Internship"
+    }
+    disciplines:["Astronomy or Astrophysics", "Biochemistry and Biophysics", "STEM Education"]
+    levels:["Junior", "Senior"]
+    targetdemos:["Black","Veteran"]
+  }) {
+    ok
+    resource {
+      id
+      name
+      link
+      deadlineTba
+      deadline
+      eligibility
+      paid
+      description
+      duration{
+        id
+        duration
+      }
+      host{
+        id
+        name
+      }
+      country{
+        id
+        name
+      }
+      province{
+        id
+        name
+      }
+      city{
+        id
+        name
+      }
+      targetdemo{
+        id
+        demographic
+      }
+      discipline{
+        id
+        discipline
+      }
+      kind{
+        id
+        kind
+      }
+      level{
+        id
+        level
+      }
+    }
+  }
+}

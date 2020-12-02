@@ -1,0 +1,6 @@
+SELECT resource.name,c.name,c.email,loc.name 
+FROM api_resource as resource 
+LEFT JOIN api_contact c 
+    ON c.id = resource.contact_id 
+LEFT JOIN api_country loc 
+    ON loc.id = resource.country_id;
